@@ -1,0 +1,4 @@
+#! /bin/bash
+cat $1  | sed 's/\\\[/\$/g' > tmp
+cat tmp | sed 's/\\\]/\$/g' > $1 
+rm tmp

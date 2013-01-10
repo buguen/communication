@@ -1,15 +1,3 @@
-latex input:	mmd-beamer-header
-Title:			Outils pour la communication scientifique 
-Subtitle:		Latex - Beamer - MultiMarkdown
-Author:			Bernard Uguen   
-Affiliation:		ESIR	
-latex mode:		beamer  
-LaTeX XSLT:		beamer
-Date:			9 Janvier 2012  
-Theme:			keynote-white
-latex input:	mmd-beamer-begin-doc
-latex footer:	mmd-beamer-footer
-
  
 ### Les gouts et et les couleurs :) ###
 
