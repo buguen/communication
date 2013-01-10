@@ -1,0 +1,11 @@
+latex input:	mmd-article-header
+Title:			Outils pour la communication scientifique 
+Subtitle:		Latex - Beamer - MultiMarkdown
+Author:			Bernard Uguen   
+Affiliation:		ESIR	
+Date:			Janvier, 2012  
+latex mode: 	memoir
+latex input:    mmd-natbib-plain
+latex input:	mmd-article-begin-doc
+latex footer:	mmd-memoir-footer
+

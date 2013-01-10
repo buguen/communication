@@ -1,0 +1,19 @@
++ copier le répertoire mmd dans votre réperoire latex local
+	~/texmf/tex/latex/mmd
+
++ Le source de Multimarkdown est dans le répertoire Multimarkdown 
+
+	copier l'exécutable soit :
+
+	- Si vous êtes administrateur dans 
+		/usr/bin/
+
+	- Dans un répertoire script local pour lequel vous avez un chemin dans votre variable d'environnement $PATH 
+
+		ajouter alors dans .bashrc 
+		PATH=$PATH:~/script
+	
++ filter est un script bash permettant de remplacer dans le fichier latex 
+	\[ \]   par $ $ 
+	
+
