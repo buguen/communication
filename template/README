@@ -1,0 +1,5 @@
+1) Installer une distribution Latex complète
+
+Placer le fichier IEEtranfr.cls dans le répertoire courrant 
+
+pdflatex esir-template.tex
