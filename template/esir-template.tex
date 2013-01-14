@@ -1,13 +1,27 @@
+%\documentclass[onecolumn,a4paper]{IEEEtranfr} %\documentclass[draft,a4paper]{IEEEtranfr}
 \documentclass[twocolumn,a4paper]{IEEEtranfr}
+%
+% verbatim : pour afficher le contenu d'un fichier 
+%
 \usepackage{verbatim}
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%
+% Pour afficher des algorithmes
+%
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{listings}
 \usepackage{url}
+\usepackage{hyperref}
 % français
 \usepackage[french]{babel}
 % accents
+%
+% ucs 
+% utf8x 
+% 
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 %\usepackage[T1]{fontenc}
@@ -16,7 +30,9 @@
 
 \makeatother
 % Placer vos figures et images dans les répertoires suivants
-\graphicspath{{./images/}{./figures}}
+%
+%
+\graphicspath{{./images/}{./figures}{../presentation/images/}}
 
 % alias
 
@@ -24,18 +40,15 @@
 \begin{document}
 
 \title{Une adaptation française de la classe IEEEtran.cls}
+\author{Stan Laurel , Oliver Hardy} 
 
-
-\author{Prénom Nom %
-%\thanks{ESIR\ldots{}%
-%}
-}
+% place le titre 
 \maketitle
 
 \begin{abstract}
-Cet article présente un modèle de document qui regroupe
-différentes structures Latex utiles lors de la rédaction d'un 
-document scientifique. 
+Ce document présenté sur deux colonnes est basé sur la classe IEEE transaction 
+francisé. Ce document regroupe différentes structures Latex utiles lors de la rédaction d'un 
+document scientifique ou pas. 
 \end{abstract}
 
 \begin{keywords}
@@ -47,21 +60,48 @@ simplicité, beauté, élégance
 
 \section{Introduction}
 
-\PARstart{L}{e} premier exemple de \cite{akgu07},\cite{akgu091}\cite{zwic00} \ldots
-Le LaTex est basé sur l'idée que les auteurs doivent pouvoir se concentrer sur
-le contenu de leur écrit sans être distrait par l'aspect visuel du document. 
+\PARstart{L}{e} LaTex est basé sur l'idée que les auteurs doivent pouvoir se concentrer sur
+le contenu de leur écrit sans être distraits par l'aspect visuel du document. 
 
 En préparant un document en LaTex, l'auteur se concentre sur la structure en
 utilisant des niveaux hiérarchiques familiers
 (chapitre,section,sous-section,paragraphe,\ldots). C'est le système LaTex qui
 se charge de la mise en forme finale. Cette approche favorise la séparation du
-fond et de la forme. 
+fond et de la forme. Certains préfèreront le fond à la forme, d'autres ne
+sauraient choisir comme sur la figure \ref{fig:fondforme}. 
 
+\begin{figure}[htpb]
+  \begin{center}
+    \includegraphics[width=7cm] {fondforme.jpg}
+  \end{center}
+  \caption{Que préférer, le fond, la forme ou les deux ? }
+  \label{fig:fondforme}
+\end{figure}
+
+\begin{figure}[htpb]
+  \begin{center}
+    \includegraphics[width=\columnwidth] {gouts.jpg}
+  \end{center}
+  \caption{Que préférer, le goût ou la couleur ou les deux ?  }
+  \label{fig:fondforme}
+\end{figure}
+
+Il est possible d'utiliser le {\texttt cite} pour citer des références
+bibliographiques. 
+premier exemple de \cite{akgu07},\cite{akgu091}\cite{zwic00} \ldots
+
+Il est posssible à l'aide de la commande {\texttt \\url{}} d'insérer un
+hyperlien, par exemple : \url{http://en.wikibooks.org/wiki/LaTeX/Command_Glossary}
 
 \section{État de l'Art} 
 
-Depuis toujours il a été question de présenter son travail sous forme écrite.
-
+{\tiny \textit
+Depuis longtemps, il fixe son précieux sous une forme écrite.
+Naguère, caractères faits de plomb, aujourd'hui de photons. Hermès aux semelles de vent. Du lourd au léger.  
+Donald Knuth est fils de Guntenberg. 13 Janvier 2013 les clés `monstrent`  1 Tera : 1 000 000 000 000 d'octets. 
+2012 la masse est dite. Quel chemin depuis Galois au modèle standard !\dots
+}
+\href{http://micro.lemondeinformatique.fr/nouveaux-produits/lire-datatraveler-hyperx-predator-19600.html}{1To}
 \section{Méthode}
 
 Décrire la méthode ici.
@@ -85,14 +125,32 @@ Décrire la méthode ici.
 \ENDFOR
 \end{algorithmic}
 \end{algorithm}
-\section{Résultats}
-Présenter les résultats ici 
-%
+\section{Organisation du répertoire template}
 
+\begin{verbatim}
+
+.
+| clean
+| esir-template.pdf
+| esir-template.tex
+| figures
+| IEEEbib.bst
+| IEEEtranfr.cls
+| images
+|   Gs2.pdf
+| README
+| ref.bib
+
+\end{verbatim}
+
+\begin{comment}
+Ceci est un commentaire. Tout ce qui est écrit ici 
+ne sera pas visible dans le document final 
+\end{comment}
 
 \begin{figure}[htbp]
 \begin{centering}
-\textsf{Une figure A single column figure goes here}
+%\textsf{Une figure A single column figure goes here}
 \par
 \includegraphics[width=7cm]{Gs2.pdf}
 \caption{La légende est \emph{sous} la figure}
@@ -102,36 +160,64 @@ Présenter les résultats ici
 
 
 
-
-
-
-\begin{figure}[htbp]
-\begin{centering}
-\textsf{Une figure A single column figure goes here}
-\par\end{centering}
-\includegraphics[width=7cm]{Gv.png}
-\caption{La légende est \emph{sous} la figure}
-\end{figure}
 \begin{table}[htbp]
-\caption{La légende  est \emph{sous} la table}
-
-
+\caption{Cette légende  est \emph{sur} la table}
 \centering{}
 \begin{tabular}{|c|c|}
 \hline 
-delete & this\tabularnewline
+LAPIN & CHAT \tabularnewline
 \hline
 \hline 
-example & table\tabularnewline
+CHEVAL  & ENCLUME \tabularnewline
 \hline
 \end{tabular}
+\caption{Cette légende  est \emph{sous} la table}
 \end{table}
-
-\clubsuit
  
+\section{Quelques jolies exemples}
+
+\subsection{Poker face}
+
+club, diamond, heart spade
+$$\clubsuit, \diamondsuit, \heartsuit ,\spadesuit$$
+
+\subsection{Pile ou Face ? }
+
+La probabilité d'obtenir k fois pile quand on lance $n$ fois la pièce
+
+\begin{equation}
+    P(k pile)   = {n \choose k} p^k (1-p)^{ n-k}
+\end{equation}
+
+\subsection{Les pépites du copain d'Hardy}
+
+\begin{equation}
+  \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
+  1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+  {1+\frac{e^{-8\pi}} {1+\ldots} } } }
+\end{equation}
+
+\subsection{What else ? }
+
+Les équations de qui déjà ? En tout cas c'est beau et ça sert ?
+
+\begin{equation}
+\begin{aligned}
+    \nabla \times \vec{\mathbf{B}} -\, \frac1c\,
+    \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\  
+    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+    \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\,
+    \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+    \nabla \cdot \vec{\mathbf{B}} & = 0
+\end{aligned}
+\end{equation}
 
 \section{Conclusions}
-
+\begin{itemize}
+  \item {\textbf GERONTE} - Tu vois mon enfant, Latex c'est frais
+  \item {\textbf ALCESTE} - Trop pas  ! Je fais la même chose avec BureauOuvert.org
+  \item {\textbf GERONTE} - Mouais \dots
+\end{itemize}
 %
 %\begin{comment}
 %\bibliographystyle{IEEEbib}
@@ -141,14 +227,16 @@ example & table\tabularnewline
 
 %\end{comment}
 {}
-\begin{biography}
-{Votre Nom} All about you and the what your interests are. Don't
-forget to put your name in between a pair of \{\}'s that are set as
-raw \TeX{}.
-\end{biography}
+\begin{IEEEbiography}
+[{\includegraphics[width=2cm]{SLaurel.jpg}}]
+{Stan Laurel } era un actor cómico, escritor y director británico,
+famoso por ser miembro del famoso dúo cómico junto a Oliver Hardy 
 
-\begin{biography}
-{Coauthor} Same again for the co-author.
-\end{biography}
+\end{IEEEbiography}
+
+\begin{IEEEbiography}
+[{\includegraphics[width=2cm]{OHardy.jpg}}]
+{Oliver Hardy} Homonyme du mentor de Srinivasa Ramanujan
+\end{IEEEbiography}
 
 \end{document}

@@ -1639,7 +1639,7 @@
 \def\appendixname{Appendice}
 \def\abstractname{Résumé}
 % IEEE specific names
-\def\IEEEkeywordsname{Mots clés}
+\def\IEEEkeywordsname{Mots cl\'es}
 \def\IEEEproofname{Preuve}
 
 
