@@ -1,4 +1,6 @@
-Cours de communication en Latex du 13 Janvier 2013 (8h-10h)
+Cours de communication en Latex  
+
+Janvier 2014 - Date à préciser 
 
 
 Ce cours est disponible sur :
