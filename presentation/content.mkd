@@ -1,5 +1,5 @@
  
-### Les gouts et et les couleurs :) ###
+### Les goûts et et les couleurs :) ###
 
 + WYSIWYG ( What You See Is What You Get  ) 
 + WYSISYM ( What You See Is What You Mean ) 
@@ -26,8 +26,8 @@
 
 ## Le language LaTex ##
 
-Dans cette section on donne quelques exemples simple d'utilisation de LaTex. 
-Pour les fonctionalités avançées, se reporter à []
+Dans cette section on donne quelques exemples simples d'utilisation de LaTex. 
+Pour les fonctionnalités avancées, se reporter à []
 
 
 ### Généralités ### 
@@ -184,7 +184,7 @@ Le document est organisé hiérarchiquement
 
 ## La classe beamer ##
 
-La classe LaTex beamer est un outil adapté à la réalisation de présentation au format pdf
+La classe LaTex beamer est un outil adapté à la réalisation de présentations au format pdf
 
 
 ### Qu'est ce que Beamer ? ###
@@ -255,11 +255,13 @@ Un document Markdown doit être lisible en l'état.
 	
 
 		Orange
+                :        Couleur de l'arc en ciel ? 
 		:	 Fruit de l'oranger
 		:	 Une firme française
 
 
 Orange
+:        Couleur de l'arc en ciel ? 
 :	 Fruit de l'oranger
 :	 Une firme française
 
@@ -293,7 +295,7 @@ Conversion de texte brut en documents de différents formats:
 * citations et bibliography (support de BibTeX)
 * support des équations mathématiques
 * possibilité de cross-référencement 
-* smart typography
+* typographie *smart*
 * Possibilité de fixer les attributs des images 
 * Légendes des tables et des figures 
 * Listes 

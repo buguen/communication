@@ -11,7 +11,7 @@ latex input:	mmd-beamer-begin-doc
 latex footer:	mmd-beamer-footer
 
  
-### Les goûts et et les couleurs :) ###
+### Les gouts et et les couleurs :) ###
 
 + WYSIWYG ( What You See Is What You Get  ) 
 + WYSISYM ( What You See Is What You Mean ) 
@@ -418,9 +418,7 @@ Il est possible de convertir un fichier MultiMarkdown en une présentation Beame
 [CTAN](http://www.ctan.org)
 [MikTex](http://miktex.org)
 [LyX](http://www.lyx.org)
-[Pandoc](http://johmacfarlane.net/pandoc)
-[bitbucket](http://bitbucket.org/)
-[github](https://github.org)
+
 
 
 ### Trucs et Astuces ###
