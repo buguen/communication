@@ -42,6 +42,181 @@
 %
 % A consommer sans modération
 
+\newcommand{\blst}{\begin{lstlisting}}
+\newcommand{\elst}{\end{lstlisting}}
+\newcommand{\beqan}{\begin{eqnarray*}}
+\newcommand{\eeqan}{\end{eqnarray*}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\bear}{\begin{eqnarray}}
+\newcommand{\ear}{\end{eqnarray}}
+\newcommand{\bears}{\begin{eqnarray*}}
+\newcommand{\ears}{\end{eqnarray*}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\rref}[1]{(\ref{#1})}
+\newcommand{\eref}[1]{\rref{#1}}
+\newcommand{\gd}{\stackrel{.}{\geq}}
+\newcommand{\ld}{\stackrel{.}{\leq}}
+%%\newcommand{\eqref}[1]{(\ref{#1})}
+\renewcommand{\r}{\right}
+\renewcommand{\l}{\left}
+\newcommand{\lbr}{\left \{ }
+\newcommand{\rbr}{\right \} }
+\newcommand{\Lbr}{\left [}
+\newcommand{\Rbr}{\right ]}
+\newcommand{\lp}{\left (}
+\newcommand{\rp}{\right )}
+%\newcommand{\mylabel}[1]{\label{#1}  \mbox{~~ \tiny \bf [ #1 ] } }
+\newcommand{\mylabel}{\label}
+
+%% Notations d'ensembles
+\newcommand{\X}{{\cal X}}
+\newcommand{\Y}{{\cal Y}}
+\newcommand{\C}{{\cal C}}
+\newcommand{\D}{{\cal D}}
+\renewcommand{\S}{{\cal S}}
+\newcommand{\T}{{\cal T}}
+\newcommand{\R}{{\cal R}}
+\renewcommand{\H}{{\cal H}}
+\newcommand{\V}{{\cal V}}
+\renewcommand{\P}{{\cal P}}
+
+%% variables
+\newcommand{\eps}{\epsilon}
+\newcommand{\real}{{\mathcal {R}}}
+\newcommand{\complex}{{\mathcal {C}}}
+
+%% scalaires
+\newcommand{\err}{\mathcal{E}}
+\newcommand{\dmin}{D_{\min}}
+\newcommand{\dl}{D_\ell}
+\newcommand{\tw}{\tilde{w}}
+\newcommand{\tx}{\tilde{x}}
+\newcommand{\ty}{\tilde{y}}
+\newcommand{\ha}{h^a}
+\newcommand{\dftd}{\tilde{d}}
+\newcommand{\dftw}{\tilde{w}}
+\newcommand{\dfty}{\tilde{y}}
+\newcommand{\dfth}{\tilde{h}}
+\newcommand{\Lagrange}{{\mathcal L}}
+\newcommand{\Ntones}{N_c}
+\newcommand{\hk}{h^{(k)}}
+\newcommand{\rh}{{\tt h}}
+%%\renewcommand{\ell}{l}
+
+%% vecteurs
+\newcommand{\vR}{{\bf R}}
+\newcommand{\vmu}{\mbox{\boldmath$\mu$}}
+\newcommand{\vbreve}[1]{\v{#1}}
+%\renewcommand{\v}[1]{{\bf #1}}
+\newcommand{\xmmse}{\hat{\vx}_{{\rm mmse}}}
+\newcommand{\va}{{\bf a}}
+\newcommand{\vone}{{\bf 1}}
+\newcommand{\vb}{{\bf b}}
+\newcommand{\vm}{{\bf m}}
+\newcommand{\vw}{{\bf w}}
+\newcommand{\vwul}{{{\bf w}_{\rm ul}}}
+\newcommand{\wul}{{{w}_{\rm ul}}}
+\newcommand{\vwdl}{{{\bf w}_{\rm dl}}}
+\newcommand{\wdl}{{{w}_{\rm dl}}}
+\newcommand{\vs}{{\bf s}}
+\newcommand{\vy}{{\bf y}}
+\newcommand{\vyul}{{{\bf y}_{\rm ul}}}
+\newcommand{\yul}{{{y}_{\rm ul}}}
+\newcommand{\pul}{{{P}_{\rm ul}}}
+\newcommand{\vydl}{{{\bf y}_{\rm dl}}}
+\newcommand{\ydl}{{{y}_{\rm dl}}}
+\newcommand{\pdl}{{{P}_{\rm dl}}}
+\newcommand{\vz}{{\bf z}}
+\newcommand{\vr}{{\bf r}}
+\newcommand{\vc}{{\bf c}}
+\newcommand{\vh}{{\bf h}}
+%\newcommand{\vg}{{\bf g}}
+\newcommand{\vx}{{\bf x}}
+\newcommand{\vxul}{{\bf x}_{\rm ul}}
+\newcommand{\xul}{{x}_{\rm ul}}
+\newcommand{\vxdl}{{\bf x}_{\rm dl}}
+\newcommand{\xdl}{{x}_{\rm dl}}
+\newcommand{\vd}{{\bf d}}
+\newcommand{\ve}{{\bf e}}
+\newcommand{\vv}{{\bf v}}
+\newcommand{\vt}{{\bf t}}
+\newcommand{\vu}{{\bf u}}
+\newcommand{\vP}{{\bf P}}
+\newcommand{\vq}{{\bf q}}
+\newcommand{\vp}{{\bf p}}
+\newcommand{\vg}{{\bf g}}
+\newcommand{\vxN}{{\bf x}^{\bf N}}
+\newcommand{\vyN}{{\bf y}^{\bf N}}
+\newcommand{\tvw}{{\bf \tilde{w}}}
+\newcommand{\tvx}{{\bf \tilde{x}}}
+\newcommand{\tvy}{{\bf \tilde{y}}}
+\newcommand{\tty}{y'}
+\newcommand{\vxa}{{\bf x}^{\bf a}}
+\newcommand{\vya}{{\bf y}^{\bf a}}
+\newcommand{\vwa}{{\bf w}^{\bf a}}
+\newcommand{\var}{{\bf e}_{\bf r}}
+\newcommand{\vat}{{\bf e}_{\bf t}}
+\newcommand{\vD}{{\bf D}}
+\newcommand{\vY}{{\bf Y}}
+\newcommand{\vW}{{\bf W}}
+\newcommand{\vdftd}{{\bf \tilde{d}}}
+\newcommand{\vdftw}{{\bf \tilde{w}}}
+\newcommand{\vdfty}{{\bf \tilde{y}}}
+\newcommand{\vdfth}{{\bf\tilde{h}}}
+\newcommand{\dftmH}{{\bf \tilde{H}}}
+\newcommand{\vdftx}{{\bf \tilde{x}}}
+\newcommand{\vdfta}{{\bf \tilde{a}}}
+\newcommand{\vxA}{{\bf x}^{\bf A}}
+\newcommand{\vxB}{{\bf x}^{\bf B}}
+\newcommand{\vxAl}{{\bf x}^{\bf A}_{\bf \ell}}
+\newcommand{\vxBl}{{\bf x}^{\bf B}_{\bf \ell}}
+\newcommand{\rl}{r^{(\ell)}}
+\newcommand{\wl}{w^{(\ell)}}
+%% matrices
+\newcommand{\mQ}{{\bf Q}}
+\newcommand{\mU}{{\bf U}}
+\newcommand{\mV}{{\bf V}}
+\newcommand{\mPsi}{{\bf \Psi}}
+\newcommand{\mUt}{{\bf U}_t}
+\newcommand{\mUr}{{\bf U}_r}
+\newcommand{\mX}{{\bf X}}
+\newcommand{\mLambda}{\mathbf{\Lambda}}
+\newcommand{\mF}{{\bf F}}
+\newcommand{\mK}{{\bf K}}
+\newcommand{\mG}{{\bf G}}
+\newcommand{\mA}{{\bf A}}
+\newcommand{\mB}{{\bf B}}
+\newcommand{\mC}{{\bf C}}
+\newcommand{\mD}{{\bf D}}
+\newcommand{\mR}{{\bf R}}
+\newcommand{\mH}{{\bf H}}
+\newcommand{\mHa}{{\bf H^a}}
+\newcommand{\mI}{{\bf I}}
+\newcommand{\mk}{{\bf K}}
+\newcommand{\mv}{{\bf V}}
+\newcommand{\mO}{{\bf O}} %% orthogonal 
+\newcommand{\mJ}{{\bf J}} %% pseudo covariance
+\newcommand{\rH}{{\tt H}}
+%%\newcommand{\dftmH}{\tilde{\mH}}
+\newcommand{\sm}[1]{\sum_{#1=-\infty}^{+\infty}}
+\newcommand{\smu}[1]{\sum_{#1=1}^{+\infty}}
+\newcommand{\smz}[1]{\sum_{#1=1}^{+\infty}}
+\newcommand{\ejm}[1]{e^{-j\omega #1}}
+\newcommand{\ejp}[1]{e^{j\omega #1}}
+\newcommand{\usdp}{\frac{1}{2\pi}}
+\newcommand{\edjm}[1]{e^{-j 2\pi f #1}}
+\newcommand{\edjp}[1]{e^{j 2\pi f #1}}
+%% math notation
+\newcommand{\sinc}{{\rm sinc}}
+\newcommand{\CN}{\mathcal{CN}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\indistrib}{\stackrel{\mathcal{D}}{\rightarrow}} 
+\newcommand{\inprob}{\stackrel{\mathcal{P}}{\rightarrow}}   
+
+
+
 \newcommand{\mc}[1]{\mathcal{#1}}
 \begin{document}
 
@@ -101,7 +276,7 @@ Il est posssible à l'aide de la commande {\texttt \\url{}} d'insérer un
 hyperlien, par exemple : \url{http://en.wikibooks.org/wiki/LaTeX/Command_Glossary}
 
 \section{État de l'Art} 
-{\tiny tiny \small small \Small Small \large large \Large Large \Huge Huge}
+{\tiny tiny \small small \large large \Large Large \Huge Huge}
 {\textit
 Depuis longtemps, il fixe son précieux sous une forme écrite.
 Naguère, caractères faits de plomb, aujourd'hui de photons. Hermès aux semelles de vent. Du lourd au léger.  
@@ -186,7 +361,7 @@ CHEVAL  & ENCLUME \tabularnewline
 \caption{Cette légende  est \emph{sous} la table}
 \end{table}
  
-\section{Quelques jolies exemples}
+\section{Quelques jolis exemples}
 
 \subsection{Poker face}
 
@@ -211,6 +386,19 @@ La probabilité d'obtenir k fois pile quand on lance $n$ fois la pièce
              {1+\frac{e^{-8\pi}} 
              {1+\ldots} } } }
 \end{equation}
+\subsection{Utilisation d'alias}
+
+La syntaxe : 
+\begin{verbatim} 
+    \newcommand{alias}{code Latex}}
+\end{verbatim}
+permet de saisir plus rapidement des expressions complexes. 
+Voir le début du source de ce document. Latex est utile non seulement pour
+écrire des mathématiques, mais aussi pour en fabriquer.
+
+\bear
+\smu{n} \frac{1}{n^2} = 
+\ear
 
 \subsection{What else ? }
 

@@ -3,9 +3,11 @@
 
 + Le source de Multimarkdown est dans le répertoire Multimarkdown 
 
-	copier l'exécutable soit :
+        make dans sous répertoire de Multimarkdown 
 
-	- Si vous êtes administrateur dans 
+	copier l'exécutable multimarkdown soit :
+
+	- Si vous êtes administrateur dans : 
 		/usr/bin/
 
 	- Dans un répertoire script local pour lequel vous avez un chemin dans votre variable d'environnement $PATH 
