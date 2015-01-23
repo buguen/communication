@@ -13,7 +13,7 @@
 + WYSIWYG
 	+ Avantages 
 		+ prise en main immédiate 
-		+ agréable 
+		+ agréable (faut voir ...) 
 + WYSIWYM
 	+ Avantages
 		+ structurant 

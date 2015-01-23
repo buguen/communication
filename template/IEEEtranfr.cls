@@ -1629,8 +1629,8 @@
 % V1.7 provide string macros as article.cls does
 \def\contentsname{Contenus}
 \def\listfigurename{Liste des Figures}
-\def\listtablename{List des Tables}
-\def\refname{References}
+\def\listtablename{Liste des Tables}
+\def\refname{Bibliographie}
 \def\indexname{Index}
 \def\figurename{Fig.}
 \def\tablename{TABLE}

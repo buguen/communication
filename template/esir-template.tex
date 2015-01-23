@@ -1,10 +1,14 @@
 %\documentclass[onecolumn,a4paper]{IEEEtranfr} %\documentclass[draft,a4paper]{IEEEtranfr}
 \documentclass[twocolumn,a4paper]{IEEEtranfr}
-%
+%\documentclass
 % verbatim : pour afficher le contenu d'un fichier 
 %
 \usepackage{verbatim}
 \usepackage{graphicx}
+%
+% Pour la gesion de la couleur 
+%
+\usepackage{color}
 %
 % + de maths avec AMS
 %
@@ -214,10 +218,14 @@
 \newcommand{\N}{\mathcal{N}}
 \newcommand{\indistrib}{\stackrel{\mathcal{D}}{\rightarrow}} 
 \newcommand{\inprob}{\stackrel{\mathcal{P}}{\rightarrow}}   
-
-
-
 \newcommand{\mc}[1]{\mathcal{#1}}
+
+%
+%
+%  Debut du document 
+%
+%
+%
 \begin{document}
 
 \title{Une adaptation française de la classe IEEEtran.cls}
@@ -248,8 +256,8 @@ En préparant un document en LaTex, l'auteur se concentre sur la structure en
 utilisant des niveaux hiérarchiques familiers
 (chapitre, section, sous-section, paragraphe,\ldots). C'est le langage
 (système) LaTex qui se charge de la mise en forme finale. Cette approche favorise la séparation du
-fond et de la forme. Certains préfèreront le fond à la forme, d'autres ne
-sauraient choisir, comme sur la figure \ref{fig:fondforme} . 
+fond et de la forme. Certains préféreront le fond à la forme, d'autres ne
+sauraient choisir, comme sur la figure ... \ref{fig:fondforme} . 
 
 \begin{figure}[htpb]
   \begin{center}
@@ -261,22 +269,22 @@ sauraient choisir, comme sur la figure \ref{fig:fondforme} .
 
 \begin{figure}[htpb]
   \begin{center}
-    \includegraphics[width=\columnwidth] {gouts.jpg}
+    \includegraphics[width=0.8\columnwidth] {gouts.jpg}
   \end{center}
   \caption{Que préférer ? Le goût, la couleur ou les deux ?  }
   \label{fig:gouts}
 \end{figure}
 
-Il est possible d'utiliser le mot clé {\texttt cite} pour citer des références
+Il est possible d'utiliser {\color{blue}\textbf{le mot}} clé {\texttt cite} pour citer des références
 bibliographiques.  
 
 Un premier exemple de \cite{akgu07},\cite{akgu091}\cite{zwic00} \ldots
 
-Il est posssible à l'aide de la commande {\texttt \\url{}} d'insérer un
+Il est possible à l'aide de la commande {\texttt \\url{}} d'insérer un
 hyperlien, par exemple : \url{http://en.wikibooks.org/wiki/LaTeX/Command_Glossary}
 
 \section{État de l'Art} 
-{\tiny tiny \small small \large large \Large Large \Huge Huge}
+{\tiny tiny \small small \large large \Large Large \Huge Huge Toi Même}
 {\textit
 Depuis longtemps, il fixe son précieux sous une forme écrite.
 Naguère, caractères faits de plomb, aujourd'hui de photons. Hermès aux semelles de vent. Du lourd au léger.  
@@ -324,7 +332,7 @@ git clone https://github.com/buguen/communication.git
 | IEEEbib.bst
 | IEEEtranfr.cls
 | images
-|   Gs2.pdf
+|   Gs2.pdf
 | README
 | ref.bib
 
@@ -417,14 +425,14 @@ Les équations de qui déjà ? En tout cas c'est beau et ça sert ?
 
 \section{Conclusion}
 \begin{itemize}
-  \item {\textbf GERONTE} - Latex c'est frais
-  \item {\textbf ALCESTE} - Trop pas  ! Je fais la même chose avec BureauOuvert.org
-  \item {\textbf GERONTE} - Mouais \dots
+  \item {\textbf GERONTE} - Latex c'est bien 
+  \item {\textbf ALCESTE} - Je fais la même chose avec BureauOuvert.org
+  \item {\textbf GERONTE} - En effet \dots
 \end{itemize}
-%
+% 
 %\begin{comment}
-%\bibliographystyle{IEEEbib}
-\bibliographystyle{utphys}
+\bibliographystyle{IEEEbib}
+%\bibliographystyle{utphys}
 %\bibliographystyle{alpha}
 \bibliography{ref}
 
