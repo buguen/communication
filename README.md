@@ -1,6 +1,6 @@
 Cours de communication en Latex  
 
-Janvier 2014 - Date à préciser 
+Janvier 2015  
 
 
 Ce cours est disponible sur :
