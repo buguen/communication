@@ -63,9 +63,11 @@ doc.tex
 Le document est organisé hiérarchiquement 
 
 * Classe Article ( 4 niveaux ) 
-	* subsection{}	 
-	* subsubsection{}
-	* paragraph{}
+
+        + section{}
+	+ subsection{}	 
+	+ subsubsection{}
+	+ paragraph{}
 
 * Classe Memoir ( 6 niveaux ) 
 

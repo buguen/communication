@@ -1,0 +1,474 @@
+\documentclass[a0]{a0poster}
+\usepackage{times,colordvi,amsmath,epsfig,float,color,multicol}
+\usepackage[large]{subfigure}
+\usepackage[latin1]{inputenc}
+\usepackage {psfrag} 
+
+%
+% landscape
+% portrait
+% a0b   ``DIN A0 big''.
+%                     
+% a0    ``DIN A0''.
+% a1    ``DIN A1''.
+% a2    ``DIN A2''.
+% a3    ``DIN A3''.
+% draft              
+% final             
+%                  
+
+%
+%
+% \tiny            12pt
+% \scriptsize      14.4pt
+% \footnotesize    17.28pt
+% \small           20.74pt
+% \normalsize      24.88pt
+% \large           29.86pt
+% \Large           35.83pt
+% \LARGE           43pt
+% \huge            51.6pt
+% \Huge            61.92pt
+% \veryHuge        74.3pt
+% \VeryHuge        89.16pt
+% \VERYHuge        107pt
+
+
+%%%%%%%%%%%%%
+%  Lengder: %
+%%%%%%%%%%%%%
+
+\addtolength{\textwidth}{2cm}
+\addtolength{\oddsidemargin}{-1.5cm}
+
+\setlength{\columnsep}{3cm}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{2ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Kommando-definisjoner:     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+
+\renewcommand{\familydefault}{phv}
+
+%\renewcommand{\normalsize}{\large}
+
+\definecolor{NTNUBlue}{rgb}{0.0470,0,0.5294}
+
+\makeatletter
+
+\renewcommand{\section}{\@startsection
+        {section}%                          % the name 
+        {1}%                                % the level
+        {0mm}%                              % the indent
+        {-0.7\baselineskip}%                % the beforeskip
+        {1mm}%                              % the afterskip
+        {\LARGE\color{NTNUBlue}\bfseries}}% % the style
+
+\renewcommand{\subsection}{\@startsection
+        {subsection}%                       % the name 
+        {2}%                                % the level
+        {0mm}%                              % the indent
+        {-0.7\baselineskip}%                % the beforeskip
+        {1mm}%                              % the afterskip
+        {\Large\color{NTNUBlue}\bfseries}}% % the style
+
+\renewcommand{\subsubsection}{\@startsection
+        {subsubsection}%                    % the name 
+        {3}%                                % the level
+        {0mm}%                              % the indent
+        {-0.7\baselineskip}%                % the beforeskip
+        {1mm}%                              % the afterskip
+        {\large\color{NTNUBlue}\bfseries}}% % the style
+\makeatother
+
+%%%%%%%%%%%% Debut du Document  %%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+\parbox{0.2\textwidth}{
+  \begin{flushleft}
+%    \epsfig{file=figures/jnm2001.eps,width=0.05\textwidth}\\
+  \end{flushleft}
+  \begin{center}
+    \epsfig{file=figures/loginsa.eps,width=0.1\textwidth}\\
+    \textrm{
+    \large
+     LCST/URER INSA Rennes         \\
+     FRE CNRS 2273                 \\
+     20, av des Buttes de Coësmes   \\
+     35043 Rennes Cédex            \\
+    }
+  \end{center}
+  }
+\parbox{0.55\textwidth}{
+   \begin{center}
+     \textrm{
+     {\veryHuge Une formulation d'optique physique 2D en champ proche}\\[1ex]
+     {\huge Bernard Uguen,  Yves Lostanlen, Gérard Chassay}\\[1ex]
+     }
+   \end{center}
+ \begin{center}
+%   \epsfig{file=figures/loginsa.eps,width=0.05\textwidth}    
+ \end{center}
+  }
+\parbox{0.2\textwidth}{
+  \begin{flushleft}
+%    \epsfig{file=figures/jnm2001.eps,width=0.05\textwidth}\\
+  \end{flushleft}
+  \begin{center}
+    \epsfig{file=figures/loginsa.eps,width=0.1\textwidth}\\
+    \textrm{
+      \large
+    LCST/URER INSA Rennes        \\
+    FRE CNRS 2273                \\
+    20, av des Buttes de Coësmes  \\
+    35043 Rennes Cédex           \\
+    }
+  \end{center}
+  }
+\end{center}
+
+% Selve teksten kommer som flere kolonner (multicols).
+
+\vspace{2cm}
+\begin{multicols}{3}
+
+
+\section{Introduction}
+
+Le travail présenté est utilisé dans le cadre de la modélisation de la rétro-diffusion d'une impulsion Ultra Large Bande par un sol diélectrique rugueux. L'approche développée est basée sur une formulation d'Optique Physique 2D. 
+
+%Pour certaines classes de problèmes, la modélisation électromagnétique par des approches bidimensionnelles permet  
+%d'obtenir des solutions parfois difficilement accessibles à des modélisations 3D. 
+%Par exemple,  pour le problème de la détection de mines dans des sols diélectriques, les approches par 
+%la FDTD bidimensionnelle sont souvent utilisées \cite{Yves}. Elles permettent d'appréhender une phénoménologie 
+%complexe et sont très précieuses pour l'analyse des signaux GPR. Cependant, lorsque l'on s'intéresse à la 
+%rétrodiffusion par une surface de grande dimension, les limites de ces méthodes sont rapidement atteintes, même en 2D. 
+%Par exemple, il est aujourd'hui difficile de prédire le signal rétrodiffusé par une large zone de terrain avec une prise en compte
+%fine à la fois des objets enfouis et du clutter de sol.
+%Une des approches possibles pour ces problèmes qui font intervenir des échelles très différentes est d'utiliser
+%une hybridation avec des approches fréquentielles qui ne nécessitent pas une discrétisation dense de l'intégralité 
+%de l'espace, mais simplement une discrétisation des zones où siègent les sources. 
+%Ce papier s'inscrit dans un projet d'hybridation de la FDTD 2D avec une méthode
+%fréquentielle basée sur un calcul des sources de courant sur l'interface soit de façon approchée par l'optique 
+%physique, soit de façon exacte par une méthode de moments 2D. La solution envisagée est d'utiliser
+%la surface du sol comme une surface d'échange des champs entre le milieu extérieur où se situe le senseur et l'intérieur du sol où se situe la mine en faisant usage du principe de Huygens. 
+%Pour permettre cet échange de champ dans la zone proche de l'interface il faut disposer d'une formulation 
+%intégrale du champ proche permettant de faire rayonner les sources de courant obtenues sur l'interface.
+%Ce papier propose une expression 2D valide en champ proche. 
+
+\section{Expression du champ diffracté} 
+On se place dans la situation décrite sur la figure \ref{fig:configuration}.  
+\begin{figure}[H]
+  \begin{center}
+      \label{fig:configuration}
+      \epsfig{file=figures/config.eps,width=0.48\columnwidth}
+      \caption{Configuration étudiée}
+  \end{center}
+\end{figure}
+
+Une source est placée dans l'air 
+et éclaire une interface $\Gamma$ qui peut être rugueuse, limitant un milieu diélectrique homogène qui peut être dispersif.
+Le champ électromagnétique diffracté s'obtient à partir des sources électriques et magnétiques sur l'interface. 
+Le champ électrique vu par l'antenne de réception s'exprime par : 
+
+\begin{equation}
+\overrightarrow{E^{s}}(W) = -\Omega (W) \frac{jk}{4\pi }
+\int_{\Gamma }\int _{-\infty }^{+\infty }
+U_{r} \overrightarrow{V_{E}}
+\frac{\exp (-jkR)}{R} dz d\gamma
+\end{equation}
+avec :
+\[
+\Omega (W)=\left\{ \begin{array}{c}
+1\, \, \, \, si\, \, W\in milieu \,\,sup\\
+-1\, \, \, \, si\, \, W\in milieu \,\,inf
+\end{array}\right. 
+\]
+et : 
+\begin{equation}
+\overrightarrow{V_{E}}=\alpha (kR)\overrightarrow{M}\times \hat{s}_{r}+\sqrt{\frac{\mu }{\epsilon }}\left( \overrightarrow{J}\beta (kR)-\gamma (kR)(\overrightarrow{J}.\hat{s}_{r})\, \hat{s}_{r}\right) 
+\label{eq_2}
+\end{equation}
+et 
+\begin{equation}
+R=\sqrt{s_{r}^{2}+z^{2}}
+\end{equation}
+L'expression (\ref{eq_2}) fait intervenir trois quantités dépendantes de \( kR \) 
+qui tendent vers \( 1 \) lorsque \( R\rightarrow \infty  \). On retrouve dans ce cas 
+l'expression classique du champ lointain. Ces quantités sont définies par :  
+
+\begin{equation}
+\alpha(kR)=1+\frac{1}{jkR} \;\;\;\;\;
+\beta (kR)=1+\frac{1}{jkR}-\frac{1}{k^{2}R^{2}}\;\;\;\;\;
+\gamma (kR)=1+\frac{3}{jkR}-\frac{3}{k^{2}R^{2}}
+\end{equation}
+
+
+La quantité complexe \( U_{r}\) permet la prise en compte du diagramme
+de l'antenne de réception.  
+
+
+La formulation 2D du champ électrique est alors : 
+
+\begin{equation}
+\overrightarrow{E^{s}}(W)=-\Omega (W)\frac{jk}{4\pi }
+\sum _{l=1}^{3}
+\int _{\Gamma }
+     \overrightarrow{V_{E_{l}}}(\gamma )U_{r}(\gamma )G_{l}(ks_{r}(\gamma ))d\gamma 
+\label{eq_7}     
+\end{equation}
+
+Avec :
+
+\begin{equation}
+G_{l} = \int_{-\infty }^{\infty }
+        \frac{\exp (-jk\sqrt{s_{r}^{2}+z^{2}})}{(s_{r}^{2}+z^{2})^{l/2}}dz
+        \, \, \, \, \, l=1,2,3
+\end{equation}
+
+Pour \( l=1 \) on retrouve la fonction de Hankel d'ordre $0$ de seconde espèce: 
+\begin{equation}
+G_{1}(ks_{r})=\frac{\pi }{j}H_{0}^{(2)}\left( ks_{r}\right) 
+\end{equation}
+
+Les quantités vectorielles de l'expression (\ref{eq_7}) s'expriment : 
+\begin{equation}
+\overrightarrow{V_{E_{1}}}
+ = \overrightarrow{M}\times \hat{s}_{r}
+  +\sqrt{\frac{\mu }{\epsilon }}
+   \left( \overrightarrow{J}-(\overrightarrow{J}.\hat{s}_{r})\, \hat{s}_{r}\right) 
+\end{equation}
+ 
+
+\begin{equation}
+\overrightarrow{V_{E_{2}}}=\frac{1}{jk}\left[ \overrightarrow{M}\times \hat{s}_{r}+\sqrt{\frac{\mu }{\epsilon }}\left( \overrightarrow{J}-3(\overrightarrow{J}.\hat{s}_{r})\, \hat{s}_{r}\right) \right] 
+\end{equation}
+ 
+
+\begin{equation}
+\overrightarrow{V_{E_{3}}}=-\frac{1}{k^{2}}\sqrt{\frac{\mu }{\epsilon }}\left( \overrightarrow{J}-3(\overrightarrow{J}.\hat{s}_{r})\, \hat{s}_{r}\right) 
+\end{equation}
+
+
+En exprimant les sources de courant électrique et magnétique en fonction des coefficients 
+de réflexion locaux sur l'interface selon : 
+
+\begin{eqnarray}
+\vec{J}\left( P\right)  & = & \frac{1}{Z_{0}}\left[ \left( 1+R_{\parallel }\right) E^{i}_{\parallel }\, \hat{t}(P)+\left( 1-R_{\bot }\right) \cos \phi _{i}E^{i}_{\bot \, }\hat{e}_{\bot }(P)\right] U_{i}(k,P)\frac{e^{-jks_{i}(P)}}{\sqrt{s_{i}(P)}}\\
+\vec{M}(P) & = & \left[ -\left( 1+R_{\bot }\right) E^{i}_{\bot }\, \hat{t}(P)+\left( 1-R_{\parallel }\right) \cos \phi _{i}E^{i}_{\parallel }\hat{e}_{\bot }(P)\right] U_{i}(k,P)\frac{e^{-jks_{i}(P)}}{\sqrt{s_{i}(P)}}
+\end{eqnarray}
+
+
+on obtient en regroupant les différents termes suivant les deux polarisations parallèle 
+et orthogonale, les expressions suivantes du champ :  
+
+\begin{equation}
+E^{s}_{\bot }(W)=
+  -\Omega(W)\frac{jk}{4\pi}
+   E^{i}_{\bot }\left[ I_{\bot }^{i}-I_{\bot }^{r}\right] \;\;\;\;
+\overrightarrow{E^{s}}_{\parallel }(W)=
+ -\Omega(W)\frac{jk}{4\pi }
+ E^{i}_{\parallel }\left[ \overrightarrow{I^{i}}_{\parallel }-\overrightarrow{I^{r}}_{\parallel }\right]
+\end{equation}
+
+\begin{equation}
+ I_{\bot }^{i} = 
+ \sqrt{\frac{\mu _{r}}{\epsilon _{r}}}
+ \int _{\Gamma }\left( \hat{s}_{i}.\hat{n}\right) 
+ (R_{\bot }-1)U_{i}(\gamma )U_{r}(\gamma )\frac{e^{-jks_{i}}}
+ {\sqrt{s_{i}}}F_{1}(ks_{r}(\gamma ))d\gamma
+\end{equation}
+
+\begin{equation}
+I_{\bot }^{r}  =
+ \int _{\Gamma }\left( \hat{s}_{r}.\hat{n}\right) 
+ (R_{\bot }+1)U_{i}(\gamma )U_{r}(\gamma )\frac{e^{-jks_{i}}}
+ {\sqrt{s_{i}}}F_{2}(ks_{r}(\gamma ))d\gamma
+\end{equation}
+
+\begin{equation}
+\overrightarrow{I_{\parallel }^{i}} = 
+ \int_{\Gamma }\left( \hat{s}_{i}.\hat{n}\right) 
+ (R_{\parallel }-1)\hat{e}_{\parallel }(\gamma )
+ U_{i}(\gamma )U_{r}(\gamma )\frac{e^{-jks_{i}}}
+ {\sqrt{s_{i}}}F_{2}(ks_{r}(\gamma ))d\gamma 
+\end{equation}
+
+\begin{equation}
+\overrightarrow{I_{\parallel }^{r}}=
+ \sqrt{\frac{\mu _{r}}{\epsilon _{r}}}
+ \int _{\Gamma }\left[ \left( \hat{s}_{r}.\hat{n}\right) 
+ F_{1}(ks_{r}(\gamma ))\hat{e}_{\parallel }(\gamma ) - 
+ 2(1-(\hat{s}_{r}.\hat{n})^{2})F_{3}(ks_{r}(\gamma ))\hat{s}_{r}\right] \left( 
+ R_{\parallel }+1\right) U_{i}(\gamma )U_{r}(\gamma )\frac{e^{-jks_{i}}}
+ {\sqrt{s_{i}}}d\gamma 
+\end{equation}
+
+Les fonctions $F_{l}$ s'expriment selon : 
+\begin{equation}
+F_{1}(ks_{r})=\sum_{l=1}^{3}\frac{G_{l}(ks_{r}(\gamma ))}{(jk)^{l-1}}
+\;\;
+F_{2}(ks_{r})=\sum_{l=1}^{2}\frac{G_{l}(ks_{r}(\gamma ))}{(jk)^{l-1}}
+\;\;
+F_{3}(ks_{r})=\sum_{l=2}^{3}\frac{G_{l}(ks_{r}(\gamma ))}{(jk)^{l-1}}
+\end{equation}
+
+
+
+Les fonctions $F_1$, $F_2$ se ramènent à la fonction de 
+Hankel d'ordre 0 en champ lointain à l'exception de $F_3$ qui  
+tend alors vers 0. Ces fonctions sont représentées et comparées à la fonction de
+Hankel sur la figure \ref{fi_Fre}. 
+
+\begin{figure}[H]
+ \begin{center}
+    \subfigure[Partie Réelle]{
+      \epsfig{file=fre.eps,width=0.48\columnwidth}}
+    \subfigure[Partie Imaginaire]{
+      \epsfig{file=fim.eps,width=0.48\columnwidth}}
+    \caption{Fonctions :$F_1$,$F_2$,$F_3$,$\frac{\pi}{j}H_0^{(2)}$ }
+    \label{fi_Fre}
+  \end{center}
+\end{figure}
+
+%\section{Calcul des fonctions $G_{l}$}
+
+%Pour la détermination de : 
+%\begin{equation}
+%G_{n}=2\int _{0}^{+\infty }\frac{e^{-jk\sqrt{s_{r}^{2}+z^{2}}}}{(s_{r}^{2}+z^{2})^{n/2}}dz
+%\end{equation}
+% 
+%
+%la procédure proposée consiste à diviser le domaine d'intégration 
+%en introduisant la  borne d'intégration \( C_{0} \). La première intégrale est
+%une intégrale définie qui est évaluée numériquement et la seconde intégrale
+%est évaluée par intégrations par parties successives :
+%
+%\begin{equation}
+%G_{n}=2\left\{ \int _{0}^{C_{0}}\frac{e^{-jk\sqrt{s_{r}^{2}+z^{2}}}}{(s_{r}^{2}+z^{2})^{n/2}}dz+\int _{C_{0}}^{+\infty }\frac{e^{-jk\sqrt{s_{r}^{2}+z^{2}}}}{(s^{2}_{r}+z^{2})^{n/2}}dz\right\} \end{equation}
+% 
+%
+%A ce stade, on pose \( r=(s^{2}_{r}+z^{2})^{1/2} \) et la seconde intégrale
+%devient :
+%
+%
+%\begin{equation}
+%I_{0_{n}}=\int _{\sqrt{s_{r}^{2}+C_{0}^{2}}}^{+\infty }f_{n}(r)e^{-jkr}dr
+%\end{equation}
+% 
+%avec 
+%
+%\begin{equation}
+%f_{n}(r)=r^{1-n}(r^{2}-s_{r}^{2})^{-1/2}
+%\end{equation}
+%On pose \( C_{1}=\sqrt{s_{r}^{2}+C_{0}^{2}} \) et on intègre \( I_{0_{n}} \)par
+%parties.
+%
+%\begin{equation}
+%I_{0_{n}}=\left[ -\frac{e^{-jkr}}{jk}f_{n}(r)\right] _{C_{1}}^{+\infty }+\frac{1}{jk}\int _{C_{1}}^{+\infty }f_{n}^{(1)}(r)e^{-jkr}dr
+%\end{equation}
+%
+%Par récurrence on obtient la série divergente : 
+%
+%\begin{equation}
+%   I_{0_{n}}=e^{-jkC_{1}}
+%   \sum _{l=0}^{\infty }\frac{f_{n}^{(l)}(C_{1})}{(jk)^{l+1}}\; \; \; n=1,2,3
+%\end{equation}
+% 
+%Les dérivées successives de la fonction \( f_{n}(r) \), se mettent sous la forme : 
+%
+%
+%\begin{equation}
+%f_{n}^{(l)}(r)=\sum _{i=0}^{l} \alpha_{n}(l,i)
+%                               r^{1+2i-n-l}
+%			       (r^{2}-s_{r}^{2})^{-\frac{1+2i}{2}}
+%\end{equation}
+% 
+%
+%On obtient par identification, les relations de récurrence suivantes pour les coefficients pondérateurs $\alpha_{n}$. 
+%
+%
+%\begin{equation}
+%\alpha_{n}(l+1,l+1)=-(2l+1)\alpha_{n}(l,l)=(-1)^{l+1}\frac{(2l+1)!}{2^{l}l!}\end{equation}
+%
+%
+%\begin{equation}
+%\alpha_{n}(l+1,i)=-(n+l-2i-1)\alpha_{n}(l,i)-(2i-1)\alpha_{n}(l,i-1) \;\;\;\;\;\;
+%\alpha_{n}(l,i)=0\; \; si\; \; i>l\end{equation}
+% 
+%
+%\begin{equation}
+%     f_{n}^{(l)}(C_{1})  =  \sum _{i=0}^{l}
+%                            \alpha_{n}(l,i)
+%			    C_{1}^{(1+2i-n-l)}
+%          		     C_{0}^{-(1+2i)}
+%\end{equation}
+%
+%
+%La contribution de l'intégration par partie s'exprime donc par la somme finie :  
+%
+%\begin{equation}
+%I_{0_{n}}=e^{-jkC_{1}}\sum _{l=0}^{M}
+%       \frac{1}{(jk)^{l+1}}
+%       \sum_{i=0}^{l}\alpha_{n}(l,i) C_{1}^{(1+2i-n-l)}
+%                                     C_{0}^{-(1+2i)}
+%\end{equation}
+%La borne $M$ de la série est la valeur seuil à partir duquel le terme général de la série 
+%cesse d'être décroissant. 
+%
+\section{Illustrations}
+La figure \ref{fig:solhum} présente une cartographie du champ électrique 
+pour les deux polarisations et pour une situation où une antenne très directive
+en forme de sinus cardinal en position (-6.69m ,6.69 m) vise l'origine avec un
+angle de $45^{\circ}$. La fréquence est de 200 MHz. L'interface est rugueuse de fonction 
+d'autocorrélation gaussienne d'écart type \( h=2cm \) et de distance de corrélation 
+\( l=50cm \). Sur le premier exemple les caractéristiques diélectriques du milieu
+correspondent à un sol sec normal  et sur le second exemple à un sol humide (standard CCIR). 
+
+\begin{figure}[H]
+  \begin{center}
+    \subfigure[sol sec]{
+      \label{fig:solsec}
+      \epsfig{file=figures/rugnorm2.eps,width=0.48\columnwidth}}
+    \subfigure[sol humide]{
+      \label{fig:EntropyProductionOpt}
+      \epsfig{file=figures/rughum2.eps,width=0.48\columnwidth}}
+    \caption{Transmission à 200 MHz entre l'air et le sol}
+    \label{fig:solhum}
+  \end{center}
+\end{figure}
+
+\section{Conclusion}
+Le papier présente en détails une méthode d'optique physique exprimée en champ proche. 
+Celle-ci nous a permis après un passage en régime temporel par FFT d'obtenir une 
+modélisation de la rétrodiffusion d'une interface rugueuse diélectrique par un signal  
+Ultra Large Bande (cf poster 5D16). 
+
+%\begin{figure}[H]
+%  \begin{center}
+%    \subfigure[Temperature profiles]{
+%      \label{fig:Tprofiles}
+%      \epsfig{file=figures/loginsa.eps,width=0.48\columnwidth}}
+%    \subfigure[Entropy Production of $\lambda_{Rx} =$ 50]{
+%      \label{fig:EntropyProductionOpt}
+%      \epsfig{file=figures/loginsa.eps,width=0.48\columnwidth}}
+%    \caption{Entropy and temperature profiles as a function of catalyst weight}
+%    \label{fig:Profiles}
+%  \end{center}
+%\end{figure}
+
+%\section{Conclusions}
+%
+%\pagebreak
+%%\bibliography{leiden} \bibliographystyle{apalike}
+
+\end{multicols}
+
+\end{document}
