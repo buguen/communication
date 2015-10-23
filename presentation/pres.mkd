@@ -15,7 +15,6 @@ latex footer:	mmd-beamer-footer
 
 + WYSIWYG ( What You See Is What You Get  ) 
 + WYSISYM ( What You See Is What You Mean ) 
-+ Julien likes les Macarons
 
 ![Gouts][Gouts]
 
