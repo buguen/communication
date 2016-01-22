@@ -5,7 +5,7 @@ Author:			Bernard Uguen
 Affiliation:		ESIR	
 latex mode:		beamer  
 LaTeX XSLT:		beamer
-Date:			13 Janvier 2013  
+Date:			23 Janvier 2015  
 Theme:			keynote-white
 latex input:	mmd-beamer-begin-doc
 latex footer:	mmd-beamer-footer
@@ -15,6 +15,7 @@ latex footer:	mmd-beamer-footer
 
 + WYSIWYG ( What You See Is What You Get  ) 
 + WYSISYM ( What You See Is What You Mean ) 
++ Julien aime les Macarons
 
 ![Gouts][Gouts]
 
@@ -25,7 +26,7 @@ latex footer:	mmd-beamer-footer
 + WYSIWYG
 	+ Avantages 
 		+ prise en main immédiate 
-		+ agréable 
+		+ agréable (faut voir ...) 
 + WYSIWYM
 	+ Avantages
 		+ structurant 
@@ -45,8 +46,8 @@ Pour les fonctionnalités avancées, se reporter à []
 ### Généralités ### 
 
 * [LaTex](http://fr.wikipedia.org/wiki/LaTeX) est un langage de composition de documents
-* Permet de produire des documents de grande qualité (orienté mathématiques)
-* Méthode privilégié d'écriture de documents scientifiques 
+* Permet de produire des documents de grande qualité (orientés mathématiques)
+* Méthode privilégiée d'écriture de documents scientifiques 
 * .tex --> .dvi --> .pdf ou .ps 
 
 ![Tex : Donald Knuth][Knuth] ![Latex : Leslie Lamport][Lamport] 
@@ -75,9 +76,11 @@ doc.tex
 Le document est organisé hiérarchiquement 
 
 * Classe Article ( 4 niveaux ) 
-	* subsection{}	 
-	* subsubsection{}
-	* paragraph{}
+
+        + section{}
+	+ subsection{}	 
+	+ subsubsection{}
+	+ paragraph{}
 
 * Classe Memoir ( 6 niveaux ) 
 
