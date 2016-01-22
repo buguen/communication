@@ -11,7 +11,7 @@ latex input:	mmd-beamer-begin-doc
 latex footer:	mmd-beamer-footer
 
  
-### Les gouts et et les couleurs :) ###
+### Les goûts et et les couleurs :) ###
 
 + WYSIWYG ( What You See Is What You Get  ) 
 + WYSISYM ( What You See Is What You Mean ) 
@@ -36,10 +36,10 @@ latex footer:	mmd-beamer-footer
 		+ le balisage peut être parasite 	
 		+ apprentissage plus long
 
-## Le language LaTex ##
+## Le langage LaTex ##
 
-Dans cette section on donne quelques exemples simple d'utilisation de LaTex. 
-Pour les fonctionalités avançées, se reporter à []
+Dans cette section on donne quelques exemples simples d'utilisation de LaTex. 
+Pour les fonctionnalités avancées, se reporter à []
 
 
 ### Généralités ### 
@@ -196,7 +196,7 @@ Le document est organisé hiérarchiquement
 
 ## La classe beamer ##
 
-La classe LaTex beamer est un outil adapté à la réalisation de présentation au format pdf
+La classe LaTex beamer est un outil adapté à la réalisation de présentations au format pdf
 
 
 ### Qu'est ce que Beamer ? ###
@@ -267,11 +267,13 @@ Un document Markdown doit être lisible en l'état.
 	
 
 		Orange
+                :        Couleur de l'arc en ciel ? 
 		:	 Fruit de l'oranger
 		:	 Une firme française
 
 
 Orange
+:        Couleur de l'arc en ciel ? 
 :	 Fruit de l'oranger
 :	 Une firme française
 
@@ -305,7 +307,7 @@ Conversion de texte brut en documents de différents formats:
 * citations et bibliography (support de BibTeX)
 * support des équations mathématiques
 * possibilité de cross-référencement 
-* smart typography
+* typographie *smart*
 * Possibilité de fixer les attributs des images 
 * Légendes des tables et des figures 
 * Listes 
@@ -380,7 +382,7 @@ Vous pouvez utiliser les metadata suivantes :
 
 + Utile pour visualiser des mathématiques 
 + ... mais aussi pour en faire 
-+ la recopie d'une étape intermédiaire dans un éditeur de texte est rapide et sans erreur
++ la recopie d'une étape intermédiaire dans un éditeur de texte est rapide et sans erreurs
  
 ### Symboles (1) ###
 
@@ -452,3 +454,4 @@ Il est possible de convertir un fichier MultiMarkdown en une présentation Beame
 		odf: content.mkd 
 			multimarkdown -t odf content.mkd > content.fodt
 
+	

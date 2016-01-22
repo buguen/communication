@@ -1,3 +1,14 @@
+latex input:	mmd-article-header
+Title:			Outils pour la communication scientifique 
+Subtitle:		Latex - Beamer - MultiMarkdown
+Author:			Bernard Uguen   
+Affiliation:		ESIR	
+Date:			Janvier, 2012  
+latex mode: 	memoir
+latex input:    mmd-natbib-plain
+latex input:	mmd-article-begin-doc
+latex footer:	mmd-memoir-footer
+
  
 ### Les goûts et et les couleurs :) ###
 
@@ -26,8 +37,8 @@
 
 ## Le language LaTex ##
 
-Dans cette section on donne quelques exemples simples d'utilisation de LaTex. 
-Pour les fonctionnalités avancées, se reporter à []
+Dans cette section on donne quelques exemples simple d'utilisation de LaTex. 
+Pour les fonctionalités avançées, se reporter à []
 
 
 ### Généralités ### 
@@ -184,7 +195,7 @@ Le document est organisé hiérarchiquement
 
 ## La classe beamer ##
 
-La classe LaTex beamer est un outil adapté à la réalisation de présentations au format pdf
+La classe LaTex beamer est un outil adapté à la réalisation de présentation au format pdf
 
 
 ### Qu'est ce que Beamer ? ###
@@ -255,13 +266,11 @@ Un document Markdown doit être lisible en l'état.
 	
 
 		Orange
-                :        Couleur de l'arc en ciel ? 
 		:	 Fruit de l'oranger
 		:	 Une firme française
 
 
 Orange
-:        Couleur de l'arc en ciel ? 
 :	 Fruit de l'oranger
 :	 Une firme française
 
@@ -295,7 +304,7 @@ Conversion de texte brut en documents de différents formats:
 * citations et bibliography (support de BibTeX)
 * support des équations mathématiques
 * possibilité de cross-référencement 
-* typographie *smart*
+* smart typography
 * Possibilité de fixer les attributs des images 
 * Légendes des tables et des figures 
 * Listes 

@@ -1,23 +1,23 @@
 all: pres report odf html
 
-pres: content.mkd
-	cat entete-beamer > pres.mkd
-	cat content.mkd >> pres.mkd 
-	multimarkdown -t latex pres.mkd -o pres.tex
+pres: content.md
+	cat entete-beamer > pres.md
+	cat content.md >> pres.md 
+	multimarkdown -t latex pres.md -o pres.tex
 	filter pres.tex
 	pdflatex pres.tex 
 
-report: content.mkd		
-	cat entete-memoir > report.mkd
-	cat content.mkd >> report.mkd 
-	multimarkdown -t latex report.mkd -o report.tex
+report: content.md		
+	cat entete-memoir > report.md
+	cat content.md >> report.md 
+	multimarkdown -t latex report.md -o report.tex
 	filter report.tex
 	pdflatex report.tex 
 
-html: content.mkd 
-	cat entete-html > web.mkd
-	cat content.mkd >> web.mkd
-	multimarkdown web.mkd 
+html: content.md 
+	cat entete-html > web.md
+	cat content.md >> web.md
+	multimarkdown web.md 
 
-odf: content.mkd 
-	multimarkdown -t odf content.mkd > content.fodt
+odf: content.md 
+	multimarkdown -t odf content.md > content.odt
