@@ -280,13 +280,13 @@ sauraient choisir, comme sur la figure ... \ref{fig:fondforme} .
   \label{fig:gouts}
 \end{figure}
 
-Il est possible d'utiliser {\color{blue}\textbf{le mot}} clé {\tt \\cite} pour citer des références
+Il est possible d'utiliser {\color{blue}\textbf{le mot}} clé {\tt{cite}} pour citer des références
 bibliographiques.  
 
 Un premier exemple d'utilisation de citation de références bibliographique. 
 \cite{akgu07},\cite{akgu091}\cite{zwic00} \ldots
 
-Il est possible à l'aide de la commande {\texttt \\url{}} d'insérer un
+Il est possible à l'aide de la commande {\tt url{}} d'insérer un
 hyperlien, par exemple : \url{http://en.wikibooks.org/wiki/LaTeX/Command_Glossary}
 
 \section{État de l'Art} 
@@ -409,16 +409,20 @@ La syntaxe :
     \newcommand{alias}{code Latex}}
 \end{verbatim}
 permet de saisir plus rapidement des expressions complexes. 
-Voir le début du sourchome/uguen/Documents/rch/publi/poster/a0poster.clse de ce document. Latex est utile non seulement pour
+Voir le début du source de ce document. Latex est utile non seulement pour
 écrire des mathématiques, mais aussi pour en fabriquer.
 
 \bear
-\smu{n} \frac{1}{n^2} = 
+\smu{n} \frac{1}{n^2} =  \frac{\pi^2}{6}
 \ear
 
-\subsection{What else ? }
+\bear
+\zeta(s)= \smu{n} \frac{1}{n^s}
+\ear
 
-Les équations de qui déjà ? En tout cas c'est beau et ça sert ?
+\subsection{What else do you expect ? }
+
+Les équations de qui déjà ?
 
 \begin{equation}
 \begin{aligned}
@@ -430,7 +434,20 @@ Les équations de qui déjà ? En tout cas c'est beau et ça sert ?
     \nabla \cdot \vec{\mathbf{B}} & = 0
 \end{aligned}
 \end{equation}
+\section{Le monstre}
+En mathématiques, le Monstre $M$ ou groupe de Fischer-Griess $F_1$ est le plus gros des 26 groupes simples sporadiques. Son ordre est
+% L'étoile permet d'éviter la numérotation
+\begin{eqnarray*}
+246.320.59.76.112.133.17.19.23.29.31.41.47.59.71 \\
+= 808 017 424 794 512 875 886 459 904 961 710 757 005 754 368 000 000 000 \\
+\approx 8.10^{53}
 
+Pour en savoir plus googler "monstrous moonshine"
+\end{eqnarray*}
+
+\section{Satoshi in the glue ...}
+"Le principe de ce système de paiement est de tenir à jour sur un très grand nombre de nœuds du réseau, un registre à la fois public et infalsifiable de toutes les transactions dont le montant est exprimé dans l'unité de compte bitcoin. Chaque bitcoin est identifiable depuis sa création, par un historique de toutes les transactions dans lesquelles il est impliqué. Les transactions sont reconnues valables par les signatures cryptographiques correspondantes qui ainsi les avalisent. Les bitcoins figurant dans les transactions dont un compte est bénéficiaire, peuvent être réutilisés par le titulaire de ce compte dans des transactions dont il sera l'émetteur. Il devra alors justifier au réseau que ce compte lui appartient au moyen d'une signature cryptographique créée à partir de sa clé privée. Les bitcoins ainsi échangés constituent une monnaie cryptographique, qui a vocation à être utilisée en tant que moyen de paiement.
+Conçu en 2009 par un développeur non identifié utilisant le pseudonyme de Satoshi Nakamoto, le protocole a été employé pour la première fois dans un logiciel écrit par Nakamoto en C++ et publié sous licence libre MIT."\footnote{Source WikiPedia}
 \section{Conclusion}
 Il faut toujours écrire une conclusion. 
 \begin{itemize}
@@ -440,9 +457,9 @@ Il faut toujours écrire une conclusion.
 \end{itemize}
 % 
 %\begin{comment}
-\bibliographystyle{IEEEbib}
+\bibliographystyle{IEEEbib} %numérique
 %\bibliographystyle{utphys}
-%\bibliographystyle{alpha}
+%\bibliographystyle{alpha}  %alphanumérique
 \bibliography{ref}
 
 %\end{comment}
