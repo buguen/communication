@@ -13,6 +13,7 @@
 %
 % + de maths avec AMS
 %
+\usepackage{chemfig}
 \usepackage{amsmath}
 \usepackage{amssymb}
 %
@@ -365,9 +366,10 @@ ne sera pas visible dans le document final
 
 \begin{table}[htbp]
 \centering{}
-\begin{tabular}{|cc|}
+\begin{tabular}{|l|r|}
 \hline 
 LAPIN & CHAT \\
+\hline
 CHEVAL  & ENCLUME \\
 \hline
 \end{tabular}
@@ -380,7 +382,14 @@ CHEVAL  & ENCLUME \\
 
 club, diamond, heart spade
 $$\clubsuit, \diamondsuit, \heartsuit ,\spadesuit$$
+\section{Chimie}
 
+Les illustrations ci-dessous proviennent du package \tt  chemfig
+\chemfig{A-B*5(-C-D*5(-X-Y-Z?)-E?-F-)} 
+
+\definesubmol{&}{-[,,,,draw=none]}
+\definesubmol{&&}{-[,,,2,draw=none]}
+\chemfig{*6((-HO)-=*6(!&!{&&}HN(-CH_3)-[,,2]-(<OH)-)-=-(-HO)=)}
 \subsection{Pile ou Face ? }
 
 La probabilité d'obtenir k fois pile quand on lance $n$ fois la pièce
@@ -458,10 +467,10 @@ Il faut toujours écrire une conclusion.
 \end{itemize}
 % 
 %\begin{comment}
-\bibliographystyle{IEEEbib} %numérique
-%\bibliographystyle{utphys}
+%\bibliographystyle{IEEEbib} %numérique
+\bibliographystyle{utphys}
 %\bibliographystyle{alpha}  %alphanumérique
-\bibliography{ref}
+\bibliography{ref}  % renvoie au fichier ref.bib dans lequel sont listé
 
 %\end{comment}
 {}
