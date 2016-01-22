@@ -3,17 +3,27 @@ Title:			Outils pour la communication scientifique
 Subtitle:		Latex - Beamer - MultiMarkdown
 Author:			Bernard Uguen   
 Affiliation:		ESIR	
+<<<<<<< HEAD:presentation/report.md
 Date:			Janvier, 2012  
 latex mode: 	memoir
 latex input:    mmd-natbib-plain
 latex input:	mmd-article-begin-doc
 latex footer:	mmd-memoir-footer
+=======
+latex mode:		beamer  
+LaTeX XSLT:		beamer
+Date:			23 Janvier 2015  
+Theme:			keynote-white
+latex input:	mmd-beamer-begin-doc
+latex footer:	mmd-beamer-footer
+>>>>>>> 23e0ab9101bc9ca9ae69eab7ef62147d8f9d92b0:presentation/pres.mkd
 
  
 ### Les goûts et et les couleurs :) ###
 
 + WYSIWYG ( What You See Is What You Get  ) 
 + WYSISYM ( What You See Is What You Mean ) 
++ Julien aime les Macarons
 
 ![Gouts][Gouts]
 
@@ -24,7 +34,7 @@ latex footer:	mmd-memoir-footer
 + WYSIWYG
 	+ Avantages 
 		+ prise en main immédiate 
-		+ agréable 
+		+ agréable (faut voir ...) 
 + WYSIWYM
 	+ Avantages
 		+ structurant 
@@ -37,15 +47,15 @@ latex footer:	mmd-memoir-footer
 
 ## Le language LaTex ##
 
-Dans cette section on donne quelques exemples simple d'utilisation de LaTex. 
-Pour les fonctionalités avançées, se reporter à []
+Dans cette section on donne quelques exemples simples d'utilisation de LaTex. 
+Pour les fonctionnalités avancées, se reporter à []
 
 
 ### Généralités ### 
 
 * [LaTex](http://fr.wikipedia.org/wiki/LaTeX) est un langage de composition de documents
-* Permet de produire des documents de grande qualité (orienté mathématiques)
-* Méthode privilégié d'écriture de documents scientifiques 
+* Permet de produire des documents de grande qualité (orientés mathématiques)
+* Méthode privilégiée d'écriture de documents scientifiques 
 * .tex --> .dvi --> .pdf ou .ps 
 
 ![Tex : Donald Knuth][Knuth] ![Latex : Leslie Lamport][Lamport] 
@@ -74,9 +84,11 @@ doc.tex
 Le document est organisé hiérarchiquement 
 
 * Classe Article ( 4 niveaux ) 
-	* subsection{}	 
-	* subsubsection{}
-	* paragraph{}
+
+        + section{}
+	+ subsection{}	 
+	+ subsubsection{}
+	+ paragraph{}
 
 * Classe Memoir ( 6 niveaux ) 
 
@@ -195,7 +207,7 @@ Le document est organisé hiérarchiquement
 
 ## La classe beamer ##
 
-La classe LaTex beamer est un outil adapté à la réalisation de présentation au format pdf
+La classe LaTex beamer est un outil adapté à la réalisation de présentations au format pdf
 
 
 ### Qu'est ce que Beamer ? ###
@@ -266,11 +278,13 @@ Un document Markdown doit être lisible en l'état.
 	
 
 		Orange
+                :        Couleur de l'arc en ciel ? 
 		:	 Fruit de l'oranger
 		:	 Une firme française
 
 
 Orange
+:        Couleur de l'arc en ciel ? 
 :	 Fruit de l'oranger
 :	 Une firme française
 
@@ -304,7 +318,7 @@ Conversion de texte brut en documents de différents formats:
 * citations et bibliography (support de BibTeX)
 * support des équations mathématiques
 * possibilité de cross-référencement 
-* smart typography
+* typographie *smart*
 * Possibilité de fixer les attributs des images 
 * Légendes des tables et des figures 
 * Listes 

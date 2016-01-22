@@ -1,11 +1,15 @@
-%\documentclass[onecolumn,a4paper]{IEEEtranfr} %\documentclass[draft,a4paper]{IEEEtranfr}
+%\documentclass[onecolumn,draft,a4paper]{IEEEtranfr} %\documentclass[draft,a4paper]{IEEEtranfr}
 \documentclass[twocolumn,a4paper]{IEEEtranfr}
-%
+%\documentclass
 % verbatim : pour afficher le contenu d'un fichier 
 %
 \usepackage{verbatim}
 % gère les graphiques .jpg, .png ,\dots.
 \usepackage{graphicx}
+%
+% Pour la gestion de la couleur 
+%
+\usepackage{color}
 %
 % + de maths avec AMS
 %
@@ -17,6 +21,9 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{listings}
+%
+% pour l'hypertexte
+%
 \usepackage{url}
 \usepackage{hyperref}
 % français
@@ -34,7 +41,7 @@
 
 \makeatother
 % Placer vos figures et images dans les répertoires suivants
-% Ne jamais mettre les nom de 
+% Ne jamais mettre les noms de 
 %
 % Attention le / final est important 
 \graphicspath{{./images/}{./figures/}{../presentation/images/}}
@@ -42,6 +49,8 @@
 % alias
 %
 % A consommer sans modération
+%
+%
 
 \newcommand{\blst}{\begin{lstlisting}}
 \newcommand{\elst}{\end{lstlisting}}
@@ -215,10 +224,13 @@
 \newcommand{\N}{\mathcal{N}}
 \newcommand{\indistrib}{\stackrel{\mathcal{D}}{\rightarrow}} 
 \newcommand{\inprob}{\stackrel{\mathcal{P}}{\rightarrow}}   
-
-
-
 \newcommand{\mc}[1]{\mathcal{#1}}
+
+%
+%
+%  Début du document 
+%
+%
 \begin{document}
 
 \title{Une adaptation française de la classe IEEEtran.cls}
@@ -228,13 +240,14 @@
 \maketitle
 
 \begin{abstract}
-Ce document présenté sur deux colonnes est basé sur la classe IEEE transaction 
-francisé. Ce document regroupe différentes structures Latex utiles lors de la rédaction d'un 
-document scientifique ou pas. 
+Ce document, présenté sur deux colonnes, est basé sur la classe IEEE
+transaction francisé. Ce document regroupe différentes structures Latex utiles
+lors de la rédaction d'un 
+document scientifique (ou pas). 
 \end{abstract} 
 
 \begin{keywords}
-simplicité, beauté, élégance
+Simplicité, beauté, élégance
 \end{keywords}
 
 %\markboth{This is for left pages}{and this is for right pages}
@@ -242,15 +255,14 @@ simplicité, beauté, élégance
 
 \section{Introduction}
 
-\PARstart{L}{e} LaTex est basé sur l'idée que les auteurs doivent pouvoir se concentrer sur
-le contenu de leur écrit sans être distraits par l'aspect visuel du document. 
+\PARstart{L}{e} LaTex est basé sur l'idée que les auteurs doivent pouvoir se concentrer sur le contenu de leur écrit sans être distraits par l'aspect visuel du document. 
 
 En préparant un document en LaTex, l'auteur se concentre sur la structure en
 utilisant des niveaux hiérarchiques familiers
 (chapitre, section, sous-section, paragraphe,\ldots). C'est le langage
 (système) LaTex qui se charge de la mise en forme finale. Cette approche favorise la séparation du
-fond et de la forme. Certains préfèreront le fond à la forme, d'autres ne
-sauraient choisir, comme sur la figure \ref{fig:fondforme} . 
+fond et de la forme. Certains préféreront le fond à la forme, d'autres ne
+sauraient choisir, comme sur la figure ... \ref{fig:fondforme} . 
 
 \begin{figure}[htpb]
   \begin{center}
@@ -262,41 +274,44 @@ sauraient choisir, comme sur la figure \ref{fig:fondforme} .
 
 \begin{figure}[htpb]
   \begin{center}
-    \includegraphics[width=\columnwidth] {gouts.jpg}
+    \includegraphics[width=0.8\columnwidth] {gouts.jpg}
   \end{center}
   \caption{Que préférer ? Le goût, la couleur ou les deux ?  }
   \label{fig:gouts}
 \end{figure}
 
-Il est possible d'utiliser le mot clé {\texttt cite} pour citer des références
+Il est possible d'utiliser {\color{blue}\textbf{le mot}} clé {\tt \\cite} pour citer des références
 bibliographiques.  
 
-Un premier exemple de \cite{akgu07},\cite{akgu091}\cite{zwic00} \ldots
+Un premier exemple d'utilisation de citation de références bibliographique. 
+\cite{akgu07},\cite{akgu091}\cite{zwic00} \ldots
 
-Il est posssible à l'aide de la commande {\texttt \\url{}} d'insérer un
+Il est possible à l'aide de la commande {\texttt \\url{}} d'insérer un
 hyperlien, par exemple : \url{http://en.wikibooks.org/wiki/LaTeX/Command_Glossary}
 
 \section{État de l'Art} 
+On peut régler la taille des caractères à l'aide des commandes suivantes : 
 {\tiny tiny \small small \large large \Large Large \Huge Huge}
+\par
 {\textit
-Depuis longtemps, il fixe son précieux sous une forme écrite.
+{`` Depuis longtemps, il fixe son précieux sous une forme écrite.
 Naguère, caractères faits de plomb, aujourd'hui de photons. Hermès aux semelles de vent. Du lourd au léger.  
-Donald Knuth est fils de Guntenberg !\dots
-}
+Donald Knuth est fils de Guntenberg !\dots''}
+
 \href{http://micro.lemondeinformatique.fr/nouveaux-produits/lire-datatraveler-hyperx-predator-19600.html}{1To}
 \section{Méthode}
 
 Ce document vise à agréger en un minimum d'espace, le maximum de possibilités
 d'édition avec Latex.
 
-Le document est disponible sur github,  vous pouvez bein sûr le modifier en y ajoutant
+Le document est disponible sur github,  vous pouvez bien sûr le modifier en y ajoutant
 vos trouvailles pour en faire profiter tout le monde.
-
+{\tt git clone https://github.com/buguen/communication.git}
 \begin{lstlisting}
-git clone https://github.com/buguen/communication.git
+
 \end{lstlisting}
 
-\begin{algorithm}                      % enter the algorithm environment
+\begin{algorithm}               % enter the algorithm environment
 \label{alg1}                           % and a label for \ref{} commands later in the document
 \caption{Determination of signatures list}
 \begin{algorithmic}                    % enter the algorithmic environment
@@ -313,26 +328,25 @@ git clone https://github.com/buguen/communication.git
 \ENDFOR
 \end{algorithmic}
 \end{algorithm}
+
 \section{Organisation du répertoire template}
 
 \begin{verbatim}
 
-.
-| clean
-| esir-template.pdf
+
 | esir-template.tex
-| figures
 | IEEEbib.bst
 | IEEEtranfr.cls
 | images
-|   Gs2.pdf
 | README
 | ref.bib
 
 \end{verbatim}
 
 \begin{comment}
-Ceci est un commentaire. Tout ce qui est écrit ici 
+Ceci est un commentaire. Tout ce qui est écrit ici
+n’apparaîtra pas dans le document final. 
+Cela peut être un lieu de discussion sur le contenu.  
 ne sera pas visible dans le document final 
 \end{comment}
 
@@ -349,14 +363,11 @@ ne sera pas visible dans le document final
 
 
 \begin{table}[htbp]
-\caption{Cette légende  est \emph{sur} la table}
 \centering{}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|cc|}
 \hline 
-LAPIN & CHAT \tabularnewline
-\hline
-\hline 
-CHEVAL  & ENCLUME \tabularnewline
+LAPIN & CHAT \\
+CHEVAL  & ENCLUME \\
 \hline
 \end{tabular}
 \caption{Cette légende  est \emph{sous} la table}
@@ -377,6 +388,10 @@ La probabilité d'obtenir k fois pile quand on lance $n$ fois la pièce
     P(k pile)   = {n \choose k} p^k (1-p)^{ n-k}
 \end{equation}
 
+Voici un exemple qui utilise une commande prédéfinie dans le fichier {\tt .tex}
+\begin{equation}
+\sm{k} \frac{1}{k^2}
+\end{equation}
 \subsection{Les pépites du copain d'Hardy}
 
 \begin{equation}
@@ -394,7 +409,7 @@ La syntaxe :
     \newcommand{alias}{code Latex}}
 \end{verbatim}
 permet de saisir plus rapidement des expressions complexes. 
-Voir le début du source de ce document. Latex est utile non seulement pour
+Voir le début du sourchome/uguen/Documents/rch/publi/poster/a0poster.clse de ce document. Latex est utile non seulement pour
 écrire des mathématiques, mais aussi pour en fabriquer.
 
 \bear
@@ -417,15 +432,16 @@ Les équations de qui déjà ? En tout cas c'est beau et ça sert ?
 \end{equation}
 
 \section{Conclusion}
+Il faut toujours écrire une conclusion. 
 \begin{itemize}
-  \item {\textbf GERONTE} - Latex c'est frais
-  \item {\textbf ALCESTE} - Trop pas  ! Je fais la même chose avec BureauOuvert.org
-  \item {\textbf GERONTE} - Mouais \dots
+  \item {\textbf GERONTE} - Latex c'est bien 
+  \item {\textbf ALCESTE} - Je fais la même chose avec BureauOuvert.org
+  \item {\textbf GERONTE} - En effet \dots
 \end{itemize}
-%
+% 
 %\begin{comment}
-%\bibliographystyle{IEEEbib}
-\bibliographystyle{utphys}
+\bibliographystyle{IEEEbib}
+%\bibliographystyle{utphys}
 %\bibliographystyle{alpha}
 \bibliography{ref}
 
