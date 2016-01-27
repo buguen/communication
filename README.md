@@ -14,3 +14,8 @@ Pour le récupérer sur votre PC :
     Appliquer vos modifs 
 
 
+Pour Installer sublime text voir 
+
+[Sublime Text Installation](https://nicolasamiot.wordpress.com/2015/11/25/sublime-text-extensions/)
+
+
