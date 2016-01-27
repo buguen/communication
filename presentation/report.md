@@ -3,20 +3,11 @@ Title:			Outils pour la communication scientifique
 Subtitle:		Latex - Beamer - MultiMarkdown
 Author:			Bernard Uguen   
 Affiliation:		ESIR	
-<<<<<<< HEAD:presentation/report.md
 Date:			Janvier, 2012  
 latex mode: 	memoir
 latex input:    mmd-natbib-plain
 latex input:	mmd-article-begin-doc
 latex footer:	mmd-memoir-footer
-=======
-latex mode:		beamer  
-LaTeX XSLT:		beamer
-Date:			23 Janvier 2015  
-Theme:			keynote-white
-latex input:	mmd-beamer-begin-doc
-latex footer:	mmd-beamer-footer
->>>>>>> 23e0ab9101bc9ca9ae69eab7ef62147d8f9d92b0:presentation/pres.mkd
 
  
 ### Les goûts et et les couleurs :) ###
@@ -45,7 +36,7 @@ latex footer:	mmd-beamer-footer
 		+ le balisage peut être parasite 	
 		+ apprentissage plus long
 
-## Le language LaTex ##
+## Le langage LaTex ##
 
 Dans cette section on donne quelques exemples simples d'utilisation de LaTex. 
 Pour les fonctionnalités avancées, se reporter à []
@@ -278,13 +269,13 @@ Un document Markdown doit être lisible en l'état.
 	
 
 		Orange
-                :        Couleur de l'arc en ciel ? 
+        :    Couleur de l'arc en ciel ? 
 		:	 Fruit de l'oranger
 		:	 Une firme française
 
 
 Orange
-:        Couleur de l'arc en ciel ? 
+:    Couleur de l'arc en ciel ? 
 :	 Fruit de l'oranger
 :	 Une firme française
 
@@ -393,7 +384,7 @@ Vous pouvez utiliser les metadata suivantes :
 
 + Utile pour visualiser des mathématiques 
 + ... mais aussi pour en faire 
-+ la recopie d'une étape intermédiaire dans un éditeur de texte est rapide et sans erreur
++ la recopie d'une étape intermédiaire dans un éditeur de texte est rapide et sans erreurs
  
 ### Symboles (1) ###
 
@@ -465,3 +456,4 @@ Il est possible de convertir un fichier MultiMarkdown en une présentation Beame
 		odf: content.mkd 
 			multimarkdown -t odf content.mkd > content.fodt
 
+	

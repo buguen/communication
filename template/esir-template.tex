@@ -234,8 +234,8 @@
 %
 \begin{document}
 
-\title{Mesure du retrait d'une résine Polyester}
-\author{Stan Laurel, Oliver Hardy} 
+\title{Mesure du retrait d'une résine chocolatée}
+\author{Bernard Uguen} 
 
 % place le titre 
 \maketitle
@@ -248,7 +248,7 @@ document scientifique (ou pas).
 \end{abstract} 
 
 \begin{keywords}
-Simplicité, beauté, élégance
+Simplicité, beauté, élégance, productivité, efficacité
 \end{keywords}
 
 %\markboth{This is for left pages}{and this is for right pages}
@@ -263,11 +263,12 @@ utilisant des niveaux hiérarchiques familiers
 (chapitre, section, sous-section, paragraphe,\ldots). C'est le langage
 (système) LaTex qui se charge de la mise en forme finale. Cette approche favorise la séparation du
 fond et de la forme. Certains préféreront le fond à la forme, d'autres ne
-sauraient choisir, comme sur la figure ... \ref{fig:fondforme} . 
+sauraient choisir, comme sur la figure \ref{fig:fondforme} . 
 
 \begin{figure}[htpb]
   \begin{center}
-    \includegraphics[width=7cm] {fondforme.jpg}
+    %\includegraphics[width=7cm] {fondforme.jpg}
+    \includegraphics[width=0.5\columnwidth] {fondforme.jpg}
   \end{center}
   \caption{Que préférer?  Le fond, la forme ou les deux ? }
   \label{fig:fondforme}
@@ -281,7 +282,7 @@ sauraient choisir, comme sur la figure ... \ref{fig:fondforme} .
   \label{fig:gouts}
 \end{figure}
 
-Il est possible d'utiliser {\color{red}\textbf{le mot}} clé {\tt{cite}} pour citer des références
+Il est possible d'utiliser {\color{red}\textbf{le mot}} clé {\tt cite} pour citer des références
 bibliographiques.  
 
 Un premier exemple d'utilisation de citation de références bibliographique. 
@@ -356,7 +357,7 @@ ne sera pas visible dans le document final
 \begin{centering}
 %\textsf{Une figure A single column figure goes here}
 \par
-\includegraphics[width=7cm]{Gs2.pdf}
+\includegraphics[width=7cm]{Gs2.png}
 \caption{La légende est \emph{sous} la figure}
 \end{centering}
 \end{figure}
@@ -366,7 +367,7 @@ ne sera pas visible dans le document final
 
 \begin{table}[htbp]
 \centering{}
-\begin{tabular}{|l|r|}
+\begin{tabular}{|c|c|}
 \hline 
 LAPIN & CHAT \\
 \hline
@@ -378,13 +379,23 @@ CHEVAL  & ENCLUME \\
  
 \section{Quelques jolis exemples}
 
+Les équations peuvent aussi être écrites en ligne en utilisant une seule fois le symbole \$ comme $E>100$ $$E>100$$
+
+\begin{equation}
+E >100
+\end{equation}
+
+\begin{equation*}
+E >100
+\end{equation*}
+
 \subsection{Poker face}
 
 club, diamond, heart spade
 $$\clubsuit, \diamondsuit, \heartsuit ,\spadesuit$$
 \section{Chimie}
 
-Les illustrations ci-dessous proviennent du package \tt  chemfig
+Les illustrations ci-dessous proviennent du package {\tt  chemfig}
 \chemfig{A-B*5(-C-D*5(-X-Y-Z?)-E?-F-)} 
 
 \definesubmol{&}{-[,,,,draw=none]}
@@ -416,7 +427,7 @@ Voici un exemple qui utilise une commande prédéfinie dans le fichier {\tt .tex
 
 La syntaxe : 
 \begin{verbatim} 
-    \newcommand{alias}{code Latex}}
+    \newcommand{alias}{code Latex}
 \end{verbatim}
 permet de saisir plus rapidement des expressions complexes. 
 Voir le début du source de ce document. Latex est utile non seulement pour
@@ -464,13 +475,14 @@ Il faut toujours écrire une conclusion.
   \item {\textbf GERONTE} - Latex c'est bien 
   \item {\textbf ALCESTE} - Je fais la même chose avec BureauOuvert.org
   \item {\textbf GERONTE} - En effet \dots
+  \item[$\clubsuit$] En effet \dots
 \end{itemize}
 % 
 %\begin{comment}
 %\bibliographystyle{IEEEbib} %numérique
 \bibliographystyle{utphys}
 %\bibliographystyle{alpha}  %alphanumérique
-\bibliography{ref}  % renvoie au fichier ref.bib dans lequel sont listé
+\bibliography{ref}  % renvoie au fichier ref.bib dans lequel sont listé les références bibliographiques
 
 %\end{comment}
 {}

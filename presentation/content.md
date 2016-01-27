@@ -258,13 +258,13 @@ Un document Markdown doit être lisible en l'état.
 	
 
 		Orange
-                :        Couleur de l'arc en ciel ? 
+        :    Couleur de l'arc en ciel ? 
 		:	 Fruit de l'oranger
 		:	 Une firme française
 
 
 Orange
-:        Couleur de l'arc en ciel ? 
+:    Couleur de l'arc en ciel ? 
 :	 Fruit de l'oranger
 :	 Une firme française
 
