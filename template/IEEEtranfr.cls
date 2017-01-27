@@ -1637,7 +1637,7 @@
 \@IEEEcompsocconfonly{\def\figurename{Figure}\def\tablename{Table}}
 \def\partname{Partie}
 \def\appendixname{Appendice}
-\def\abstractname{Summary}
+\def\abstractname{R\'esumè}
 % IEEE specific names
 \def\IEEEkeywordsname{Mots cl\'es}
 \def\IEEEproofname{Preuve}

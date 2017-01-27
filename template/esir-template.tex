@@ -10,10 +10,15 @@
 % Pour la gestion de la couleur 
 %
 \usepackage{color}
+
+%
+% Formule chimique
+%
+\usepackage{chemfig}
 %
 % + de maths avec AMS
 %
-\usepackage{chemfig}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 %
@@ -212,6 +217,7 @@
 \newcommand{\rH}{{\tt H}}
 %%\newcommand{\dftmH}{\tilde{\mH}}
 \newcommand{\sm}[1]{\sum_{#1=-\infty}^{+\infty}}
+\newcommand{\smr}[3]{\sum_{#1=#2}^{#3}}
 \newcommand{\smu}[1]{\sum_{#1=1}^{+\infty}}
 \newcommand{\smz}[1]{\sum_{#1=1}^{+\infty}}
 \newcommand{\ejm}[1]{e^{-j\omega #1}}
@@ -234,8 +240,8 @@
 %
 \begin{document}
 
-\title{Mesure du retrait d'une résine chocolatée}
-\author{Bernard Uguen} 
+\title{Mesure du retrait d'une résine chocolatée et nougat}
+\author{Bernard Uguen, Anthony Billard} 
 
 % place le titre 
 \maketitle
@@ -256,19 +262,19 @@ Simplicité, beauté, élégance, productivité, efficacité
 
 \section{Introduction}
 
-\PARstart{L}{e} LaTex est basé sur l'idée que les auteurs doivent pouvoir se concentrer sur le contenu de leur écrit sans être distraits par l'aspect visuel du document. 
+\PARstart{G}{e} LaTex est basé sur l'idée que les auteurs doivent pouvoir se concentrer sur le contenu de leur écrit sans être distraits par l'aspect visuel du document. 
 
 En préparant un document en LaTex, l'auteur se concentre sur la structure en
 utilisant des niveaux hiérarchiques familiers
 (chapitre, section, sous-section, paragraphe,\ldots). C'est le langage
 (système) LaTex qui se charge de la mise en forme finale. Cette approche favorise la séparation du
-fond et de la forme. Certains préféreront le fond à la forme, d'autres ne
+fond et de la forme. Certains préfèreront le fond à la forme, d'autres ne
 sauraient choisir, comme sur la figure \ref{fig:fondforme} . 
 
 \begin{figure}[htpb]
   \begin{center}
     %\includegraphics[width=7cm] {fondforme.jpg}
-    \includegraphics[width=0.5\columnwidth] {fondforme.jpg}
+    \includegraphics[width=\columnwidth]{fondforme.jpg}
   \end{center}
   \caption{Que préférer?  Le fond, la forme ou les deux ? }
   \label{fig:fondforme}
@@ -278,15 +284,20 @@ sauraient choisir, comme sur la figure \ref{fig:fondforme} .
   \begin{center}
     \includegraphics[width=0.8\columnwidth] {gouts.jpg}
   \end{center}
-  \caption{Que préférer ? Le goût, la couleur ou les deux ?  }
+  \caption{Que préférer ? Le gout, la couleur ou les deux ?  }
   \label{fig:gouts}
 \end{figure}
+
+
+\begin{comment}
+Désolé mais je ne suis pas d'accord, il faut tout virer. J'ai dit tout !
+\end{comment}
 
 Il est possible d'utiliser {\color{red}\textbf{le mot}} clé {\tt cite} pour citer des références
 bibliographiques.  
 
 Un premier exemple d'utilisation de citation de références bibliographique. 
-\cite{akgu07},\cite{akgu091}\cite{zwic00} \ldots
+\cite{akgu07},\cite{akgu091}\cite{zwic00}\cite{loredo_accuracy_2001}\ldots
 
 Il est possible à l'aide de la commande {\tt url{}} d'insérer un
 hyperlien, par exemple : \url{http://en.wikibooks.org/wiki/LaTeX/Command_Glossary}
@@ -367,7 +378,7 @@ ne sera pas visible dans le document final
 
 \begin{table}[htbp]
 \centering{}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|r|r|}
 \hline 
 LAPIN & CHAT \\
 \hline
@@ -383,8 +394,10 @@ Les équations peuvent aussi être écrites en ligne en utilisant une seule fois
 
 \begin{equation}
 E >100
+\label{eq:1}
 \end{equation}
 
+On peut observer dans \ref{eq:1}}
 \begin{equation*}
 E >100
 \end{equation*}
@@ -455,6 +468,9 @@ Les équations de qui déjà ?
     \nabla \cdot \vec{\mathbf{B}} & = 0
 \end{aligned}
 \end{equation}
+\section{Utilisation de l'alias \\sm}
+$$\sm{k}$$
+$$\smr{j}{1}{+\infty}$$
 \section{Le monstre}
 En mathématiques, le Monstre $M$ ou groupe de Fischer-Griess $F_1$ est le plus gros des 26 groupes simples sporadiques. Son ordre est
 % L'étoile permet d'éviter la numérotation
